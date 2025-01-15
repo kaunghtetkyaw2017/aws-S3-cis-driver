@@ -1,4 +1,4 @@
-# Managing Persistent Storage with Amazon S3 on Amazon EKS
+# Managing Persistent Storage with Amazon S3 on EKS cluster
 
 ![Full-Size Image](https://github.com/kaunghtetkyaw2017/aws-s3-csi-driver/blob/main/architecture.png?raw=true)
 
