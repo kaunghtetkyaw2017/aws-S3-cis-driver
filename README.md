@@ -1,6 +1,6 @@
 # Managing Persistent Storage with Amazon S3 on Amazon EKS
 
-![Full-Size Image]([https://github.com/username/repository/raw/main/images/example.png](https://github.com/kaunghtetkyaw2017/aws-s3-csi-driver/blob/main/architecture.png))
+![Full-Size Image](https://github.com/kaunghtetkyaw2017/aws-s3-csi-driver/blob/main/architecture.png?raw=true)
 
 ### **1. Create S3 bucket with unique name.**
 
