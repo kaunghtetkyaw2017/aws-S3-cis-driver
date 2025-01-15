@@ -1,7 +1,7 @@
 # Managing Persistent Storage with Amazon S3 on Amazon EKS
 
 <p align="center">
-  <img src="src="https://github.com/user-attachments/assets/8c8fe811-8141-4e02-91ff-cf19f74a6e9e" alt="Full-Size Image" width="600">
+  <img src="src="architecture.png" alt="Full-Size Image" width="600">
 </p>
 
 ### **1. Create S3 bucket with unique name.**
