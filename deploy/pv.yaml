@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: s3-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  csi:
+    driver: s3.csi.aws.com
+    volumeHandle: uat-bk
+    volumeAttributes:
+      bucketName: uat-bk
+      region: ap-southeast-1
