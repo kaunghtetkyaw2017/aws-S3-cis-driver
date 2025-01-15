@@ -1,6 +1,6 @@
 # Managing Persistent Storage with Amazon S3 on Amazon EKS
 
-**1. Create S3 bucket with unique name.**
+##**1. Create S3 bucket with unique name.**
 
 2. Save the Json file with `s3-access-policy.json`
    > Replace `amzn-s3-demo-bucket1` with your own Amazon S3 bucket name.
