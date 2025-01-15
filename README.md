@@ -1,9 +1,7 @@
 # Managing Persistent Storage with Amazon S3 on Amazon EKS
 
-<p align="center">
-  <img src="src=architecture.png" width="600">
-</p>
-architecture.png
+![Full-Size Image]([https://github.com/username/repository/raw/main/images/example.png](https://github.com/kaunghtetkyaw2017/aws-s3-csi-driver/blob/main/architecture.png))
+
 ### **1. Create S3 bucket with unique name.**
 
 ### **2. Save the Json file with `s3-access-policy.json`:**
