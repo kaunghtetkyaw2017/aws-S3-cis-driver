@@ -1,9 +1,9 @@
 # Managing Persistent Storage with Amazon S3 on Amazon EKS
 
 <p align="center">
-  <img src="src="architecture.png" alt="Full-Size Image" width="600">
+  <img src="src=architecture.png" width="600">
 </p>
-
+architecture.png
 ### **1. Create S3 bucket with unique name.**
 
 ### **2. Save the Json file with `s3-access-policy.json`:**
