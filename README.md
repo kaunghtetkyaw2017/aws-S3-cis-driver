@@ -2,7 +2,7 @@
 
 ## **1. Create S3 bucket with unique name.**
 
-2. Save the Json file with `s3-access-policy.json`
+## **2. Save the Json file with `s3-access-policy.json`:**
    > Replace `amzn-s3-demo-bucket1` with your own Amazon S3 bucket name.
 
 ```json
@@ -36,14 +36,14 @@
 }
 ```
 
-3. Create policy with `s3-access-policy.json`:
+## **3. Create policy with `s3-access-policy.json`:**
 ```bash
 aws iam create-policy \
     --policy-name AmazonS3CSIDriverPolicy \
     --policy-document file://s3-access-policy.json
 ```
 
-4. Save the Json file with `aws-s3-csi-driver-trust-policy.json`:
+## **4. Save the Json file with `aws-s3-csi-driver-trust-policy.json`:**
 ```json
 {
     "Version": "2012-10-17",
@@ -65,21 +65,21 @@ aws iam create-policy \
 }
 ```
 
-5. Create the role using AWS CLI:
+## **5. Create the role using AWS CLI:**
 ```bash
 aws iam create-role \
     --role-name AmazonEKS_S3_CSI_DriverRole \
     --assume-role-policy-document file://"aws-s3-csi-driver-trust-policy.json"
 ```
 
-6. Attach `AmazonS3CSIDriverPolicy` ARN to the role:
+## **6. Attach `AmazonS3CSIDriverPolicy` ARN to the role:**
 ```bash
 aws iam attach-role-policy \
     --role-name AmazonEKS_S3_CSI_DriverRole \
     --policy-arn arn:aws:iam::881490128348:policy/AmazonS3CSIDriverPolicy
 ```
 
-7. Associate role with service account:
+## **7. Associate role with service account:**
 ```bash
 eksctl create iamserviceaccount \
   --name s3-csi-controller-sa \
@@ -90,7 +90,7 @@ eksctl create iamserviceaccount \
   --override-existing-serviceaccounts
 ```
 
-8. Add Amazon S3 CSI add-on:
+## **8. Add Amazon S3 CSI add-on:**
 ```bash
 eksctl create addon \
      --name aws-mountpoint-s3-csi-driver \
@@ -105,7 +105,7 @@ aws eks create-addon \
     --service-account-role-arn arn:aws:iam::111122223333:role/AmazonEKS_S3_CSI_DriverRole
 ```
 
-9. Configure the Storage Class:
+## **9. Configure the Storage Class:**
 ```yaml
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
@@ -120,7 +120,7 @@ reclaimPolicy: Retain
 volumeBindingMode: Immediate
 ```
 
-10. Create a PersistentVolume:
+## **10. Create a PersistentVolume:**
 ```yaml
 apiVersion: v1
 kind: PersistentVolume
@@ -139,7 +139,7 @@ spec:
       region: ap-southeast-1
 ```
 
-11. Create a PersistentVolumeClaim:
+## **11. Create a PersistentVolumeClaim:**
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -154,7 +154,7 @@ spec:
   volumeName: s3-pv
 ```
 
-12. Deploy a Sample Application:
+## **12. Deploy a Sample Application:**
 
 Write data in pod1:
 ```yaml
