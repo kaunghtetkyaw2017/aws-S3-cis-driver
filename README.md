@@ -78,7 +78,7 @@ aws iam create-role \
 ```bash
 aws iam attach-role-policy \
     --role-name AmazonEKS_S3_CSI_DriverRole \
-    --policy-arn arn:aws:iam::881490128348:policy/AmazonS3CSIDriverPolicy
+    --policy-arn arn:aws:iam::<AWS_ACCOUNT_ID>:policy/AmazonS3CSIDriverPolicy
 ```
 
 ### **7. Associate role with service account:**
